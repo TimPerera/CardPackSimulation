@@ -1,5 +1,7 @@
 """
+Card.py
 
+Class that makes up the properties of a Card in a Deck of Cards. This is the base class for Deck and Player classes.
 """
 
 # TODO: Add tests
@@ -9,7 +11,8 @@
 
 class Card():
     """
-    Creates a Card object that make up the card deck. Each card has it's own value (val) and suit.
+    Creates a Card object that make up the card deck. Each card has it's own value (val) and suit. This 
+    will be the base class for the Deck and Player sub classes.
     Inputs: 
         val: (str) Indicates the value of the card
         suit:(str) Indicates the suit of the card
