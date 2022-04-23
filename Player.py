@@ -4,7 +4,7 @@ Simulates the behaviours of a card player.
 """
 
 
-from Deck import Deck
+from deck import Deck
 
 
 class Player(Deck):

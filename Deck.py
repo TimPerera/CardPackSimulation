@@ -9,7 +9,7 @@ deck of cards.
 
 import random
 
-from Card import Card
+from cards import Card
 
 class Deck(Card):
     """

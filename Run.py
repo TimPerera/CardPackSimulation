@@ -5,8 +5,8 @@ Command Line Interface for Playing Cards
 import sys
 import argparse
 
-from Deck import Deck
-from Player import Player
+from deck import Deck
+from player import Player
 
 class PlayCardsApp():
 
