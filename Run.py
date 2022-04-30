@@ -23,7 +23,6 @@ class PlayCardsApp():
         parser = argparse.ArgumentParser()
         # Number of players playing
         parser.add_argument('-p','--players', action='store',
-                            default='player',
                             nargs='*',
                             help = 'List of players playing.')
         # How many cards to serve to each player
@@ -63,11 +62,13 @@ if __name__ == '__main__':
     args = PlayCardsApp.parse_args(sys.argv[1:])
     app = PlayCardsApp(args.verbose)
     deck = app.create_deck(args.shuffle)
-    list_of_players = []
-    players = args.players[0].split(',')
-    for player in players:
-        list_of_players.append(app.ready_player(Player(player), deck, int(args.num_cards)))
-    print('Ready!')
+
+    if args.players: # Will only initialize players if we are supplied with player names. 
+        list_of_players = []
+        players = args.players[0].split(',')
+        for player in players:
+            list_of_players.append(app.ready_player(Player(player), deck, int(args.num_cards)))
+        print('Ready!')
 
 
     

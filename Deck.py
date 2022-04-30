@@ -29,7 +29,8 @@ class Deck(Card):
     Returns:
         List of cards as a <Deck> obj
     """
-    def __init__(self, cards=[],shuffle='N'):
+    def __init__(self, shuffle='N'):
+        cards=[]
         self.cards = cards
         self.build(shuffle) # Upon initialization of the object, immediately build the deck of cards.
 
@@ -46,13 +47,6 @@ class Deck(Card):
             self.shuffle()
 
     def count(self):
-        """
-        Returns the number of cards in the deck.
-        Returns: (int) Number of cards in deck. 
-        """
-        return len(self.cards)
-
-    def __len__(self):
         """
         Returns the number of cards in the deck.
         Returns: (int) Number of cards in deck. 
@@ -106,8 +100,12 @@ class Deck(Card):
             or
             served (list): List of <Card> obj that was served for a single player.
         """
+        if not isinstance(players,list):
+            raise TypeError("serve method requires that players be provided as a list object.")
         served = []
         if num_cards > len(self.cards): return 'Error! Not enough cards in deck to distribute'
+        print(f'players is {players}')
+        
         if players:
             for player in players:
                 for _ in range(num_cards):
@@ -118,3 +116,8 @@ class Deck(Card):
                 served.append(self.cards.pop())
             return served
 
+    def show(self):
+        view = []
+        for card in self.cards:
+            view.append(Card.show_card(card))
+        return view
