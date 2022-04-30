@@ -16,8 +16,9 @@ class Player(Deck):
     Returns:
         <Player> obj
     """
-    def __init__(self, deck = None):
+    def __init__(self, name, deck = None):
         self.hand = []
+        self.name = name
         self.deck = deck
 
     def draw(self, num_cards=1):
@@ -26,10 +27,11 @@ class Player(Deck):
         Input:
             num_deck (int): Number of cards to draw from a deck. Default is one.
         Returns: 
-            <Deck> obj - A list of <Card> objs.
+            list - A list of <Card> objs.
         
         """
-        return self.hand.append(Deck.serve(self.deck, num_cards)[0])
+        self.hand += Deck.serve(self.deck, num_cards)
+        return self
 
     def discard(self, position=-1): 
         """
@@ -95,5 +97,7 @@ class Player(Deck):
                 values[idx] = 12
             elif value == 'King':
                 values[idx] = 13
+            else:
+                values[idx] = int(value)
         return sum(values)
 
