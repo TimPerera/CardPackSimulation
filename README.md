@@ -33,7 +33,8 @@ Example Use Case:
 
 What's Outstanding in this Project:
 - [ ] Build tests
-- [] Publish to distribution and on PyPI
+- [ ] Publish to distribution and on PyPI
+- [ ] Create game (Black Jack)
 
 
 
