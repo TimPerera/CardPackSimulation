@@ -31,7 +31,9 @@ Example Use Case:
     player.deck = deck # This makes sure that the player is linked to the deck of cards
 ```
 
-
+What's Outstanding in this Project:
+([]) Build tests
+([]) Publish to distribution and on PyPI
 
 
 
