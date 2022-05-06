@@ -20,6 +20,7 @@ class Player(Deck):
         self.hand = []
         self.name = name
         self.deck = deck
+        print(f' Player: {name} is ready!')
 
     def draw(self, num_cards=1):
         """

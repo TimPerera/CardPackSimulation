@@ -30,9 +30,9 @@ class PlayCardsApp():
                             default = 1,
                             help = 'Choose how many cards to distribute to each player')
         # Choose whether to shuffle the cards in the deck
-        parser.add_argument('-s','--shuffle',
-                            default = 'Y',
-                            choices = ['Y','N'],
+        parser.add_argument('-s','--shuffled',
+                            default = True,
+                            choices = [True,False],
                             help = 'Choose whether to shuffle the deck.')
         # For more logging (troubleshooting) choose whether to be verbose
         parser.add_argument('-v', '--verbose',
@@ -54,9 +54,7 @@ class PlayCardsApp():
                                  player.count(),
                                  player.total())
         return new_player
-
-
-
+        
 
 if __name__ == '__main__':
     args = PlayCardsApp.parse_args(sys.argv[1:])

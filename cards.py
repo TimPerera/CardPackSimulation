@@ -5,7 +5,6 @@ Class that makes up the properties of a Card in a Deck of Cards. This is the bas
 
 # TODO: Add tests
 # TODO: Build in to a package
-# TODO: Build a command-line interface
 
 
 class Card():

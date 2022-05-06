@@ -29,12 +29,12 @@ class Deck(Card):
     Returns:
         List of cards as a <Deck> obj
     """
-    def __init__(self, shuffle='N'):
+    def __init__(self, shuffled=False):
         cards=[]
         self.cards = cards
-        self.build(shuffle) # Upon initialization of the object, immediately build the deck of cards.
+        self.build(shuffled) # Upon initialization of the object, immediately build the deck of cards.
 
-    def build(self, shuffle):
+    def build(self, shuffled):
         # Compile the list of cards in a deck
         card_vals = ['1','2','3','4','5','6','7','8','9','10','Jack','Queen','King']
         card_suits = ['Spades','Hearts','Clubs','Diamonds']
@@ -43,7 +43,7 @@ class Deck(Card):
                 self.cards.append(Card(val, suit))
         print(f'Deck has been built, with {len(self.cards)} cards.')
 
-        if shuffle == 'Y':
+        if shuffled:
             self.shuffle()
 
     def count(self):
