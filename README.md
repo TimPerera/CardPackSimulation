@@ -32,8 +32,8 @@ Example Use Case:
 ```
 
 What's Outstanding in this Project:
-([]) Build tests
-([]) Publish to distribution and on PyPI
+- [ ] Build tests
+- [] Publish to distribution and on PyPI
 
 
 
